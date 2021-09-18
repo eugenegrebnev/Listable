@@ -10,7 +10,7 @@ import Foundation
 
 extension Array
 {
-    func forEachWithIndex(_ block : (Int, Bool, Element) -> ())
+    public func forEachWithIndex(_ block : (Int, Bool, Element) -> ())
     {
         let count = self.count
         var index : Int = 0
@@ -22,7 +22,7 @@ extension Array
         }
     }
     
-    func mapWithIndex<Mapped>(_ block : (Int, Bool, Element) -> Mapped) -> [Mapped]
+    public func mapWithIndex<Mapped>(_ block : (Int, Bool, Element) -> Mapped) -> [Mapped]
     {
         var mapped = [Mapped]()
         mapped.reserveCapacity(self.count)
@@ -39,7 +39,7 @@ extension Array
         return mapped
     }
     
-    func compactMapWithIndex<Mapped>(_ block : (Int, Bool, Element) -> Mapped?) -> [Mapped]
+    public func compactMapWithIndex<Mapped>(_ block : (Int, Bool, Element) -> Mapped?) -> [Mapped]
     {
         var mapped = [Mapped]()
         mapped.reserveCapacity(self.count)
